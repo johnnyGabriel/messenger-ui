@@ -1,0 +1,21 @@
+body {
+    background: #000 !important;
+}
+
+.message {
+    position: relative;
+    height: 120px;
+}
+
+.message .wrapper {
+    max-width:  50%;
+}
+
+/* Bootstrap Override */
+.popover {
+    position: relative !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
