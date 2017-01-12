@@ -14,6 +14,9 @@ class Input extends Component {
     handleSubmit(event) {
 
         event.preventDefault()
+
+        if (!this.state.value) return false
+
         this.props.onFinish(this.state.value)
         this.setState({ value: '' })
 

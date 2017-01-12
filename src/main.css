@@ -2,18 +2,36 @@ body {
     background: #000 !important;
 }
 
+.messages-wrapper {
+    height: calc(100% - 76px);
+    margin: 14px 0;
+    padding-right: 20px;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
 .message {
     position: relative;
-    height: 120px;
+    margin-bottom: 15px;
 }
 
 .message .wrapper {
     max-width:  50%;
 }
 
+#content {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+}
+
 /* Bootstrap Override */
 .popover {
     position: relative !important;
+}
+
+.popover-content {
+    word-break: break-all;
 }
 
 .form-control {

@@ -28,11 +28,15 @@ class Messenger extends Component {
         this.socket.onopen = event =>
             console.log("connected", event)
 
-        this.socket.onclose = event =>
-            console.log("closed", event)
+        this.socket.onclose = event => {
+            console.log("closed", event);
+            alert('Conexão finalizada inesperadamente!')
+        }
 
-        this.socket.onerror = event =>
+        this.socket.onerror = event => {
             console.log("error", event)
+            alert('Erro na conexão! Tente novamente!')
+        }
 
         this.socket.onmessage = event => {
 

@@ -17,12 +17,19 @@ class MessageList extends Component {
         }
     }
 
+    componentDidUpdate() {
+
+        const el = this.refs.wrapperEl
+        el.scrollTop = el.scrollHeight
+
+    }
+
     render() {
 
         const { messages, currentUser } = this.props
 
         return (
-            <div>
+            <div ref="wrapperEl" className="messages-wrapper">
                 { messages.map( msg =>
                     <Message
                         key={ msg._id }

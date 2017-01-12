@@ -28,7 +28,7 @@ class Message extends Component {
         })
 
         return (
-            <div className="message">
+            <div className="message clearfix">
                 <div className={ wrapperClass }>
                     <Popover
                         placement={ isCurrentUser ? 'left' : 'right' }
